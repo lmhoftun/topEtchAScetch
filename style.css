@@ -18,3 +18,18 @@ main{
     border-radius: 15px;
     margin-top: 15px;
 }
+
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.cell {
+    display: flex;
+    flex: 1;
+    border:solid;
+    border-width: 1px 1px 1px 1px;
+}

@@ -3,7 +3,23 @@
 //function createGrid 
     //init with 16x16
     //from user input
+function createGrid(tiles){
+    //create and append the rows
+    for (let y=0; y < tiles;y++){
+        let row = document.createElement('div');
+        row.classList.add('row');
+        container.appendChild(row);
+        
+        //Create and append columns
+        for (let x=0; x < tiles; x++){
+            let cell = document.createElement('div');
+            cell.classList.add('cell');
+            row.appendChild(cell);
+        }
 
+    }
+
+}
 
 //function color
     //draw with random colors
@@ -28,5 +44,9 @@ buttons.forEach((button) => {
         console.log(button.id);
     });
 });
+
+const container = document.getElementById('container');
+createGrid(16);
+
 
 
