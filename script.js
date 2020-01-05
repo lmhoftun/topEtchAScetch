@@ -21,6 +21,15 @@ function createGrid(tiles){
 
 }
 
+/*function createGrid(tiles){
+    for (let y = 0; y < tiles; y++){
+        for (let x =0; x < tiles; x++){
+            let cell = document.createElement('div');
+            cell.classList.add('cell');
+            container.appendChild(cell);
+        }
+    }
+}*/
 //function color
     //draw with random colors
 
