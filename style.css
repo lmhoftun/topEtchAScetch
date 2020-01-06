@@ -31,4 +31,5 @@ main{
     flex:1;
     border:solid;
     border-width: 1px 1px 1px 1px;
+    background-color: grey;
 }

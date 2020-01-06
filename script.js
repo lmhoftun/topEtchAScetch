@@ -20,6 +20,12 @@ function createGrid(tiles){
     }
 
 }
+
+function drawBlack(){
+    this.style.backgroundColor="black";
+    
+}
+
 //Listening to the buttons
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
@@ -35,7 +41,12 @@ buttons.forEach((button) => {
                 let tiles = parseInt(prompt("input new resolution", 16), 10);
                 console.log(tiles);
                 createGrid(tiles);
-            break;
+                break;
+            case "btnBlack":
+                drawBlack();
+                break;
+            
+
             default:
                 prompt("Tullball");//sorry 'bout the gibberish
                 break;
@@ -52,5 +63,9 @@ buttons.forEach((button) => {
 const container = document.getElementById('container');
 createGrid(16);
 
+const cells = document.getElementsByClassName('cell');
+for ( let cell = 0; cell<cells.length; cell++){
+    cells[cell].addEventListener("mouseover", drawBlack)
+}
 
 
