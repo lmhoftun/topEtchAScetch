@@ -1,5 +1,6 @@
 /*These are but prliminary thoughts*/
-
+const container = document.getElementById('container');
+let color = "white";
 //function createGrid 
     //init with 16x16
     //from user input
@@ -18,12 +19,26 @@ function createGrid(tiles){
         }
 
     }
+    let cells = document.getElementsByClassName('cell');
+for (let i = 0; i < cells.length; i++){
+    cells[i].addEventListener("mouseover", draw);
+}
+    
 
 }
 
-function drawBlack(){
+function draw(color){
     this.style.backgroundColor="black";
+        
     
+}
+
+function selectColor(){
+
+}
+
+function selectDarken(){
+
 }
 
 //Listening to the buttons
@@ -43,7 +58,14 @@ buttons.forEach((button) => {
                 createGrid(tiles);
                 break;
             case "btnBlack":
-                drawBlack();
+                color = "black";
+                break;
+
+            case "btnColor":
+                selectColor();
+                break;
+            case "btnDarken":
+                selectDarken();
                 break;
             
 
@@ -60,12 +82,10 @@ buttons.forEach((button) => {
     });
 });
 
-const container = document.getElementById('container');
+
 createGrid(16);
 
-const cells = document.getElementsByClassName('cell');
-for ( let cell = 0; cell<cells.length; cell++){
-    cells[cell].addEventListener("mouseover", drawBlack)
-}
+
+
 
 
