@@ -20,37 +20,32 @@ function createGrid(tiles){
     }
 
 }
-
-/*function createGrid(tiles){
-    for (let y = 0; y < tiles; y++){
-        for (let x =0; x < tiles; x++){
-            let cell = document.createElement('div');
-            cell.classList.add('cell');
-            container.appendChild(cell);
-        }
-    }
-}*/
-//function color
-    //draw with random colors
-
-//function black
-    //draw with black
-
-//function grayscale
-    //draw with 10% grayscale. 
-    //darken on overlap
-
-//function clearGrid
-    //clear everything
-    //keep colorselection
-
-
-
 //Listening to the buttons
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
         console.log(button.id);
+        switch (button.id){
+            case "btnClear":
+                //Clear the grid
+                while (container.firstChild) {
+                    container.removeChild(container.firstChild);
+                }
+                //prompt for new grid size
+                let tiles = parseInt(prompt("input new resolution", 16), 10);
+                console.log(tiles);
+                createGrid(tiles);
+            break;
+            default:
+                prompt("Tullball");//sorry 'bout the gibberish
+                break;
+
+        }
+        //btnClear
+        //btbBlack
+        //btnColor
+        //btnDarken
+
     });
 });
 
